@@ -1,24 +1,73 @@
-# Neural Style Transfer using AdaIN
+#  Neural Style Transfer using AdaIN
 
-A Deep Learning based Neural Style Transfer (NST) project that combines the content of one image with the artistic style of another image using Adaptive Instance Normalization (AdaIN) and a pretrained VGG network.
+A Deep Learning-based Neural Style Transfer (NST) web application that transforms ordinary images into artistic creations by combining the content of one image with the style of another using **Adaptive Instance Normalization (AdaIN)** and **PyTorch**.
 
-The project provides both training and inference capabilities along with a Flask-based web application for generating stylized images.
+##  Live Demo
+
+ **Try the application here:**  
+https://asham-06-asha.hf.space
+
+ **Hugging Face Space:**  
+https://huggingface.co/spaces/Asham-06/Asha
 
 ---
 
-## Features
+##  Project Overview
 
-- Neural Style Transfer using AdaIN
-- Fast image stylization
-- Multiple content and style image support
+Neural Style Transfer is a Computer Vision technique that applies the artistic style of one image to another while preserving its original content.
+
+This project leverages:
+
+- Adaptive Instance Normalization (AdaIN)
+- Pretrained VGG Encoder
+- Decoder Network for image reconstruction
+- PyTorch for deep learning implementation
+- Flask for backend integration
+- Hugging Face Spaces for deployment
+
+Users can upload a content image and a style image through a web interface and generate a stylized output image instantly.
+
+---
+
+##  Features
+
+- Upload custom content images
+- Upload custom style images
+- Real-time image stylization
+- Fast AdaIN-based style transfer
+- User-friendly web interface
 - Pretrained VGG feature extractor
-- Flask web interface
-- Real-time image upload and stylization
-- PyTorch implementation
+- Public deployment using Hugging Face Spaces
+- Download generated stylized images
 
 ---
 
-## Project Structure
+##  Tech Stack
+
+### Programming Language
+- Python
+
+### Deep Learning Framework
+- PyTorch
+- Torchvision
+
+### Web Framework
+- Flask
+
+### Libraries
+- NumPy
+- Pillow
+
+### Deployment
+- Hugging Face Spaces
+
+### Version Control
+- Git
+- GitHub
+
+---
+
+##  Project Structure
 
 ```text
 nst_project/
@@ -57,22 +106,9 @@ nst_project/
 
 ---
 
-## Technologies Used
+##  Installation
 
-- Python
-- PyTorch
-- Torchvision
-- Flask
-- Pillow
-- NumPy
-- HTML
-- CSS
-
----
-
-## Installation
-
-### Clone Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/Asha-m06/nst_project.git
@@ -87,13 +123,13 @@ python -m venv venv
 
 Activate environment:
 
-Windows
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux / Mac
+**Linux / macOS**
 
 ```bash
 source venv/bin/activate
@@ -107,15 +143,15 @@ pip install torch torchvision flask pillow numpy
 
 ---
 
-## Running the Application
+##  Run Locally
 
-Start the Flask server:
+Start the Flask application:
 
 ```bash
 python run_app.py
 ```
 
-Open the application in your browser:
+Open your browser and visit:
 
 ```text
 http://127.0.0.1:5001/
@@ -123,70 +159,49 @@ http://127.0.0.1:5001/
 
 ---
 
-## Training the Model
+##  Model Architecture
 
-To train the Neural Style Transfer model:
-
-```bash
-python train.py
-```
-
-Training checkpoints and outputs will be saved inside the experiment directory.
-
----
-
-## How Neural Style Transfer Works
-
-1. Input a Content Image
-2. Input a Style Image
-3. Extract feature representations using a pretrained VGG network
-4. Apply Adaptive Instance Normalization (AdaIN)
-5. Decode transformed features
-6. Generate the stylized output image
-
----
-
-## Workflow
+The workflow followed by the project:
 
 ```text
 Content Image
-       │
-       ▼
-Pretrained VGG Encoder
-       │
-       ▼
-AdaIN Layer
-       │
-       ▼
+      │
+      ▼
+VGG Encoder
+      │
+      ▼
+Adaptive Instance Normalization (AdaIN)
+      │
+      ▼
 Decoder Network
-       │
-       ▼
+      │
+      ▼
 Stylized Output Image
 ```
 
+### Pipeline
+
+1. Upload Content Image
+2. Upload Style Image
+3. Extract Deep Features using VGG Encoder
+4. Apply Adaptive Instance Normalization
+5. Decode Modified Features
+6. Generate Stylized Output Image
+
 ---
 
-## Sample Images
+##  Sample Workflow
 
-### Content Images
+### Input
 
-Examples are available in:
+- Content Image
+- Style Image
 
-```text
-content_data/
-```
+### Output
 
-### Style Images
+- Stylized Image preserving content structure and artistic style
 
-Examples are available in:
-
-```text
-style_data/
-```
-
-### Output Images
-
-Generated outputs are stored in:
+Generated images are stored in:
 
 ```text
 static/uploads/
@@ -194,56 +209,58 @@ static/uploads/
 
 ---
 
-## Example Usage
+##  Deployment
 
-1. Launch the application
+The application is deployed and publicly accessible through Hugging Face Spaces.
 
-```bash
-python run_app.py
-```
+**Live Application:**  
+https://asham-06-asha.hf.space
 
-2. Open
-
-```text
-http://127.0.0.1:5001/
-```
-
-3. Upload a content image
-4. Upload a style image
-5. Generate stylized artwork
-6. Download the generated image
+**Hugging Face Space:**  
+https://huggingface.co/spaces/Asham-06/Asha
 
 ---
 
-## Repository
+##  Applications
 
-GitHub Repository:
-
-https://github.com/Asha-m06/nst_project
+- Digital Art Generation
+- Creative Image Editing
+- Artistic Photo Transformation
+- Deep Learning Demonstrations
+- Computer Vision Research
+- Educational Projects
 
 ---
 
-## Future Improvements
+##  Future Enhancements
 
 - Multiple style blending
-- Adjustable style intensity
-- High-resolution image generation
+- Adjustable style strength
+- Batch image processing
+- Higher-resolution outputs
 - Docker deployment
 - GPU optimization
-- Cloud deployment
+- Mobile-friendly interface
 
 ---
 
-## Author
+##  Author
 
 **Asha M**
 
 Information Science Engineering Student
 
-Deep Learning | Computer Vision | Artificial Intelligence
+Interests:
+- Artificial Intelligence
+- Machine Learning
+- Deep Learning
+- Computer Vision
+- Full-Stack AI Applications
+
+GitHub: https://github.com/Asha-m06
 
 ---
 
-## License
+##  License
 
-This project is developed for educational and research purposes.
+This project is intended for educational, research, and learning purposes.
